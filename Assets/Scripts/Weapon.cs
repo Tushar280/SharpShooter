@@ -6,9 +6,14 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
-           Debug.Log(hit.transform.gameObject.name); 
+            if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100))
+            {
+                Debug.Log(hit.transform.gameObject.name); 
+                
+            }
         }
+        
     }
 }
