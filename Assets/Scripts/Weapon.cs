@@ -10,6 +10,5 @@ public class Weapon : MonoBehaviour
         {
            Debug.Log(hit.transform.gameObject.name); 
         }
-        
     }
 }
