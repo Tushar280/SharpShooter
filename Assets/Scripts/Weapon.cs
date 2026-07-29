@@ -11,7 +11,12 @@ public class Weapon : MonoBehaviour
             if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100))
             {
                 Debug.Log(hit.transform.gameObject.name); 
-                
+                EnemyHealth em = hit.transform.gameObject.GetComponent<EnemyHealth>();
+
+                if(em)
+                {
+                    em.TakeDamage(10);
+                }
             }
         }
         
