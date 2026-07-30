@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f92079bcfa102489670c52c5d0d91f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Robot
-  target: {fileID: 0}
+  target: {fileID: 5928583991220424036, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
 --- !u!135 &7443356582388198102
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 30
+  explo: {fileID: 3377956608036776227, guid: 067fa88c29bb38f419da0ca4ee1b7316, type: 3}
 --- !u!1001 &1935575601647749113
 PrefabInstance:
   m_ObjectHideFlags: 0
