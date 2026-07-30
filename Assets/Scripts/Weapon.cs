@@ -3,26 +3,20 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] RaycastHit hit;
-    [SerializeField] WeaponSO weaponSO;
-    [SerializeField] ParticleSystem muzz;
+    
+
+    [Header("VFX")]
+    
     [SerializeField] ParticleSystem hit1;
 
-    private void Update()
+    public void Shoot(WeaponSO weaponSO)
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            muzz.Play();
-            if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100))
+        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100))
             {   
                 Instantiate(hit1,hit.point,Random.rotation);
                 EnemyHealth em = hit.transform.gameObject.GetComponent<EnemyHealth>();
-
-                if(em)
-                {
-                    em.TakeDamage(weaponSO.damage);
-                }
+                em?.TakeDamage(weaponSO.damage);
+                
             }
-        }
-        
     }
 }
