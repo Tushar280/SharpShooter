@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1306152269763550146}
   - component: {fileID: 3093461811977908547}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
   muzz: {fileID: 1990022599340601212}
+  hit1: {fileID: 279669244787430331, guid: acc2f9da7ff3b3841bee64bcd2f2a3eb, type: 3}
 --- !u!1 &6667639298100345669
 GameObject:
   m_ObjectHideFlags: 0

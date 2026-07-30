@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
   damage: 5
-  firerate: 5
+  firerate: -5.06
