@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dea52e3ae96a1746840e0f5e26b85d1, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
-  damage: 10
+  damage: 30
   firerate: 1

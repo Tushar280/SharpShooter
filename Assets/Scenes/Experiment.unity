@@ -6352,6 +6352,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5489063388735669526, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
+      propertyPath: weaponSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 00b4f646c477aa5488db25d48b11c180, type: 2}
     - target: {fileID: 5928583991220424036, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule
