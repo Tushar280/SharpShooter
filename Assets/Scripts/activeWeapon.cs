@@ -16,12 +16,10 @@ public class activeWeapon : MonoBehaviour
     private void Update()
     {
         initTime += Time.deltaTime;
-        
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             if(initTime >= weaponSO.firerate)
             {
-                weaponSO.muzz.Play();
                 weapon.Shoot(weaponSO);
                 initTime = 0;
             }

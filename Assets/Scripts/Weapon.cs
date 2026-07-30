@@ -3,7 +3,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] RaycastHit hit;
-    
+    [SerializeField] ParticleSystem muzz;
 
     [Header("VFX")]
     
@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     {
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100))
             {   
+                muzz.Play();
                 Instantiate(hit1,hit.point,Random.rotation);
                 EnemyHealth em = hit.transform.gameObject.GetComponent<EnemyHealth>();
                 em?.TakeDamage(weaponSO.damage);
