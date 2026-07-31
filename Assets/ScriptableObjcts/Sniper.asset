@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
   damage: 30
   firerate: 1
+  weaponPrefab: {fileID: 7446012117988197410, guid: b979e335d88468941b3da7ffe5052734, type: 3}

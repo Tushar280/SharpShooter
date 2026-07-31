@@ -17,6 +17,7 @@ public class WeaponPickup : MonoBehaviour
         {
             //active weapon switch
             activeWeapon.SwitchWeapon(weaponSO);
+            Destroy(gameObject);
         }
     }
 }
