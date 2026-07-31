@@ -1,22 +1,30 @@
 using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.UI;
+using StarterAssets;
 
 public class activeWeapon : MonoBehaviour
 {
     Weapon weapon;
     CinemachineCamera virtualCamera;
-    [SerializeField] WeaponSO weaponSO;
     GameObject currentWeaponInstance;
+    FirstPersonController fpc;
+    [SerializeField] WeaponSO weaponSO;
     [SerializeField] GameObject zoomImg;
+    [SerializeField] float zoomSense;
+    
+    
 
     float initTime;
     float defaultFov = 60f;
+    float defaultZoomSense;
 
     private void Start()
     {
         weapon = GetComponentInChildren<Weapon>();
         virtualCamera = FindAnyObjectByType<CinemachineCamera>();
+        fpc = FindAnyObjectByType<FirstPersonController>();
+        defaultZoomSense = 1f;
         
         if (virtualCamera != null)
         {
@@ -62,6 +70,8 @@ public class activeWeapon : MonoBehaviour
             }
 
             if (zoomImg != null) zoomImg.SetActive(true);
+
+            fpc.ChangeSense(zoomSense);
         }
         else
         {
@@ -75,6 +85,8 @@ public class activeWeapon : MonoBehaviour
             }
 
             if (zoomImg != null) zoomImg.SetActive(false);
+
+            fpc.ChangeSense(defaultZoomSense);
         }
     }
 

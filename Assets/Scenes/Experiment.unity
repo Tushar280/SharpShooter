@@ -6567,6 +6567,10 @@ PrefabInstance:
       propertyPath: weaponSO
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
+      propertyPath: zoomSense
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2352601173611916330, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.31
