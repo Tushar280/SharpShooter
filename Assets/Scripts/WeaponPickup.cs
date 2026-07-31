@@ -8,7 +8,7 @@ public class WeaponPickup : MonoBehaviour
 
     private void Start()
     {
-        activeWeapon = FindFirstObjectByType<activeWeapon>();
+        activeWeapon = FindAnyObjectByType<activeWeapon>();
     }
 
     private void OnTriggerEnter(Collider other)
