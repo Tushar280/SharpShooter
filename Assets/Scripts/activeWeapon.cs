@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class activeWeapon : MonoBehaviour
 {
-    Weapon weapon;
+    Weapon currentWeapon;
     [SerializeField] WeaponSO weaponSO;
 
     float initTime;
 
     private void Start()
     {
-        weapon = FindFirstObjectByType<Weapon>();
+        currentWeapon = FindFirstObjectByType<Weapon>();
         initTime = 0;
     }
 
@@ -20,7 +20,7 @@ public class activeWeapon : MonoBehaviour
         {
             if(initTime >= weaponSO.firerate)
             {
-                weapon.Shoot(weaponSO);
+                currentWeapon.Shoot(weaponSO);
                 initTime = 0;
             }
             

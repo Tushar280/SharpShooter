@@ -3,12 +3,12 @@ using UnityEngine;
 public class WeaponPickup : MonoBehaviour
 {
     const string PLAYER_TAG = "Player";
-    WeaponSO weaponSO;
+    [SerializeField] WeaponSO weaponSO;
     activeWeapon activeWeapon;
 
     private void Start()
     {
-        activeWeapon = FindFirstObjectByType<ActiveWeapon>();
+        activeWeapon = FindFirstObjectByType<activeWeapon>();
     }
 
     private void OnTriggerEnter(Collider other)
