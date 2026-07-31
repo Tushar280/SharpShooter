@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    const string PLAYER_TAG = "Player";
+    WeaponSO weaponSO;
+    activeWeapon activeWeapon;
+
+    private void Start()
     {
-        
+        activeWeapon = FindFirstObjectByType<ActiveWeapon>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if(other.gameObject.CompareTag(PLAYER_TAG))
+        {
+            //active weapon switch
+            activeWeapon.SwitchWeapon(weaponSO);
+        }
     }
 }

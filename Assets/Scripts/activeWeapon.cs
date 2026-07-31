@@ -27,5 +27,10 @@ public class activeWeapon : MonoBehaviour
         }
         
     }
+
+    public void SwitchWeapon(WeaponSO weaponSO)
+    {
+        Debug.Log("Switched to weapon: " + weaponSO.name);
+    }
     
 }
