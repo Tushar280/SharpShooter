@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class activeWeapon : MonoBehaviour
 {
-    Weapon currentWeapon;
+    Weapon weapon;
     [SerializeField] WeaponSO weaponSO;
+    GameObject currentWeaponInstance;
 
     float initTime;
 
     private void Start()
     {
-        currentWeapon = FindFirstObjectByType<Weapon>();
+        weapon = FindFirstObjectByType<Weapon>();
         initTime = 0;
     }
 
@@ -20,7 +21,7 @@ public class activeWeapon : MonoBehaviour
         {
             if(initTime >= weaponSO.firerate)
             {
-                currentWeapon.Shoot(weaponSO);
+                weapon.Shoot(weaponSO);
                 initTime = 0;
             }
             
@@ -31,6 +32,14 @@ public class activeWeapon : MonoBehaviour
     public void SwitchWeapon(WeaponSO weaponSO)
     {
         Debug.Log("Switched to weapon: " + weaponSO.name);
+
+        if(weapon)
+        {
+            Destroy(weapon.gameObject);
+        }
+        Weapon NewWeapon = Instantiate(weaponSO.weaponPrefab,transform).GetComponent<Weapon>();
+        weapon = NewWeapon;
+        this.weaponSO = weaponSO;
     }
     
 }
