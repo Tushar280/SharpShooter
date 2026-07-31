@@ -22,6 +22,10 @@ public class activeWeapon : MonoBehaviour
         {
             defaultFov = virtualCamera.Lens.FieldOfView;
         }
+        else if (Camera.main != null)
+        {
+            defaultFov = Camera.main.fieldOfView;
+        }
 
         if (weapon == null && weaponSO != null && weaponSO.weaponPrefab != null)
         {
@@ -39,16 +43,37 @@ public class activeWeapon : MonoBehaviour
 
     private void HandleZoom()
     {
-        if (weaponSO == null || !weaponSO.canZoom || virtualCamera == null) return;
+        if (weaponSO == null || !weaponSO.canZoom) return;
+
+        if (virtualCamera == null)
+        {
+            virtualCamera = FindAnyObjectByType<CinemachineCamera>();
+        }
 
         if (Input.GetKey(KeyCode.Mouse1))
         {
-            virtualCamera.Lens.FieldOfView = weaponSO.zoomFov;
+            if (virtualCamera != null)
+            {
+                virtualCamera.Lens.FieldOfView = weaponSO.zoomFov;
+            }
+            else if (Camera.main != null)
+            {
+                Camera.main.fieldOfView = weaponSO.zoomFov;
+            }
+
             if (zoomImg != null) zoomImg.SetActive(true);
         }
         else
         {
-            virtualCamera.Lens.FieldOfView = defaultFov;
+            if (virtualCamera != null)
+            {
+                virtualCamera.Lens.FieldOfView = defaultFov;
+            }
+            else if (Camera.main != null)
+            {
+                Camera.main.fieldOfView = defaultFov;
+            }
+
             if (zoomImg != null) zoomImg.SetActive(false);
         }
     }
