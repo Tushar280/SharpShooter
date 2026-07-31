@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
   muzz: {fileID: 7758805651296192406}
+  shootableLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   hit1: {fileID: 7721042791955987952, guid: fb0cd2a951898f24ca14cbaeaab8df9a, type: 3}
 --- !u!1 &6667639298100345669
 GameObject:

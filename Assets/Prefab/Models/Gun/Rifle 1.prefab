@@ -154,6 +154,10 @@ PrefabInstance:
       propertyPath: muzz
       value: 
       objectReference: {fileID: 8517002800736836162}
+    - target: {fileID: 3093461811977908547, guid: 03320737db1291d44b856e7ea8d7d85f, type: 3}
+      propertyPath: shootableLayer.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5173448346113258274, guid: 03320737db1291d44b856e7ea8d7d85f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.264
