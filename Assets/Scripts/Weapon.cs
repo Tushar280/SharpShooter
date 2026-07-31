@@ -14,7 +14,8 @@ public class Weapon : MonoBehaviour
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100))
             {   
                 muzz.Play();
-                Instantiate(hit1,hit.point,Random.rotation);
+                ParticleSystem hitVFX = Instantiate(hit1, hit.point, Random.rotation);
+                Destroy(hitVFX.gameObject, 1f);
                 EnemyHealth em = hit.transform.gameObject.GetComponent<EnemyHealth>();
                 em?.TakeDamage(weaponSO.damage);
                 

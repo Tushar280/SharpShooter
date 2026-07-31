@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dea52e3ae96a1746840e0f5e26b85d1, type: 3}
   m_Name: Rifle
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
-  damage: 5
-  firerate: -5.06
+  damage: 6
+  firerate: -16.86
   weaponPrefab: {fileID: 7446012117988197410, guid: 7b1964fadc56e264ba31df1f551042fe, type: 3}

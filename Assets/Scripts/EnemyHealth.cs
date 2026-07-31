@@ -9,8 +9,9 @@ public class EnemyHealth : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
-            Instantiate(explo,transform.position,Random.rotation);
+            ParticleSystem ExploVFX = Instantiate(explo,transform.position,Random.rotation);
             Destroy(gameObject);
+            Destroy(ExploVFX.gameObject, 1f);
         }
     }
 }

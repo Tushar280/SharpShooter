@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
   damage: 8
-  firerate: 0.26
+  firerate: 1
   weaponPrefab: {fileID: 549442741652355009, guid: 03320737db1291d44b856e7ea8d7d85f, type: 3}
