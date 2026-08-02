@@ -7092,11 +7092,15 @@ PrefabInstance:
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: weaponSO
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: dad324b631b2ac2439ebf2311ac40aae, type: 2}
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: zoomSense
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
+      propertyPath: startingWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 54415c14abaf0da4ba12f314b9ab93f3, type: 2}
     - target: {fileID: 2352601173611916330, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.31

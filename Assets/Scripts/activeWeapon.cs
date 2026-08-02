@@ -2,26 +2,30 @@ using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.UI;
 using StarterAssets;
+using TMPro;
 
 public class activeWeapon : MonoBehaviour
 {
-    Weapon weapon;
-    CinemachineCamera virtualCamera;
-    GameObject currentWeaponInstance;
-    FirstPersonController fpc;
+    [SerializeField] WeaponSO startingWeapon;
     [SerializeField] WeaponSO weaponSO;
     [SerializeField] GameObject zoomImg;
     [SerializeField] float zoomSense;
+
+    [SerializeField] TMP_Text currentAmmo;
+    [SerializeField] TMP_Text totalAmmo;
     
-    
+    Weapon currentweapon;
+    CinemachineCamera virtualCamera;
+    FirstPersonController fpc;
 
     float initTime;
     float defaultFov = 60f;
     float defaultZoomSense;
 
     private void Start()
-    {
-        weapon = GetComponentInChildren<Weapon>();
+    {   
+        currentweapon = GetComponentInChildren<Weapon>();
+        SwitchWeapon(startingWeapon);
         virtualCamera = FindAnyObjectByType<CinemachineCamera>();
         fpc = FindAnyObjectByType<FirstPersonController>();
         defaultZoomSense = 1f;
@@ -35,11 +39,11 @@ public class activeWeapon : MonoBehaviour
             defaultFov = Camera.main.fieldOfView;
         }
 
-        if (weapon == null && weaponSO != null && weaponSO.weaponPrefab != null)
+        if (currentweapon == null && weaponSO != null && weaponSO.weaponPrefab != null)
         {
             SwitchWeapon(weaponSO);
         }
-        initTime = 0;
+        initTime = 10;
     }
 
     private void Update()
@@ -92,13 +96,13 @@ public class activeWeapon : MonoBehaviour
 
     private void HandleShoot()
     {
-        if (weaponSO == null || weapon == null) return;
+        if (weaponSO == null || currentweapon == null) return;
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
             if (initTime >= weaponSO.firerate)
             {
-                weapon.Shoot(weaponSO);
+                currentweapon.Shoot(weaponSO);
                 initTime = 0;
             }
         }
@@ -108,14 +112,15 @@ public class activeWeapon : MonoBehaviour
     {
         Debug.Log("Switched to weapon: " + weaponSO.name);
 
-        if (weapon != null)
+        if (currentweapon != null)
         {
-            Destroy(weapon.gameObject);
+            Destroy(currentweapon.gameObject);
         }
         if (weaponSO != null && weaponSO.weaponPrefab != null)
         {
+            totalAmmo.text = weaponSO.magSize.ToString("D2");
             Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
-            weapon = newWeapon;
+            currentweapon = newWeapon;
             this.weaponSO = weaponSO;
         }
     }
