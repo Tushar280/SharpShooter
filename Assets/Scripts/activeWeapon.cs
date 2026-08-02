@@ -61,38 +61,45 @@ public class activeWeapon : MonoBehaviour
         if (virtualCamera == null)
         {
             virtualCamera = FindAnyObjectByType<CinemachineCamera>();
-        }
+            if (virtualCamera == null && Camera.main != null)
+            {
+                var brain = Camera.main.GetComponent<CinemachineBrain>();
+                if (brain != null && brain.ActiveVirtualCamera is CinemachineCamera vcam)
+                {
+                    virtualCamera = vcam;
+                }
+            }
 
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
             if (virtualCamera != null)
             {
-                virtualCamera.Lens.FieldOfView = weaponSO.zoomFov;
+                float currentCamFov = virtualCamera.Lens.FieldOfView;
+                if (currentCamFov > 0) defaultFov = currentCamFov;
             }
-            else if (Camera.main != null)
+            else if (Camera.main != null && Camera.main.fieldOfView > 0)
             {
-                Camera.main.fieldOfView = weaponSO.zoomFov;
+                defaultFov = Camera.main.fieldOfView;
             }
-
-            if (zoomImg != null) zoomImg.SetActive(true);
-
-            fpc.ChangeSense(zoomSense);
         }
-        else
+
+        if (defaultFov <= 0) defaultFov = 60f;
+
+        bool isZooming = Input.GetKey(KeyCode.Mouse1);
+        float targetFov = isZooming ? (weaponSO.zoomFov > 0 ? weaponSO.zoomFov : 15f) : defaultFov;
+
+        if (virtualCamera != null)
         {
-            if (virtualCamera != null)
-            {
-                virtualCamera.Lens.FieldOfView = defaultFov;
-            }
-            else if (Camera.main != null)
-            {
-                Camera.main.fieldOfView = defaultFov;
-            }
-
-            if (zoomImg != null) zoomImg.SetActive(false);
-
-            fpc.ChangeSense(defaultZoomSense);
+            var lens = virtualCamera.Lens;
+            lens.FieldOfView = targetFov;
+            virtualCamera.Lens = lens;
         }
+
+        if (Camera.main != null)
+        {
+            Camera.main.fieldOfView = targetFov;
+        }
+
+        if (zoomImg != null) zoomImg.SetActive(isZooming);
+        if (fpc != null) fpc.ChangeSense(isZooming ? zoomSense : defaultZoomSense);
     }
 
     private void HandleShoot()

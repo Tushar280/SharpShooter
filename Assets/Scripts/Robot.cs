@@ -7,9 +7,11 @@ public class Robot : MonoBehaviour
     EnemyHealth em;
 
     UnityEngine.AI.NavMeshAgent agentRobo;
+    PlayerHealth ph;
 
     private void Awake()
     {
+        ph = FindAnyObjectByType<PlayerHealth>();
         em = GetComponent<EnemyHealth>();
         agentRobo = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
@@ -23,6 +25,7 @@ public class Robot : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            ph.TakeDamage(40);
             em.SelfDestroy();
         }
     }

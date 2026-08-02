@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
         if(health <= 0)
         {
             SelfDestroy();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         
     }
