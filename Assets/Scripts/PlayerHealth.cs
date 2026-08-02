@@ -15,17 +15,16 @@ public class PlayerHealth : MonoBehaviour
         {
             SelfDestroy();
         }
+        
     }
 
     public void SelfDestroy()
     {
-        ParticleSystem ExploVFX = Instantiate(explo,transform.position,Random.rotation);
         Destroy(gameObject);
-        Destroy(ExploVFX.gameObject, 1f);
     }
 
     public void Update()
     {
-
+        healthText.text = health.ToString();
     }
 }
