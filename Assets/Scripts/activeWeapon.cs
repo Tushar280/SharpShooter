@@ -124,7 +124,7 @@ public class activeWeapon : MonoBehaviour
         {
             totalAmmoUI.text = weaponSO.magSize.ToString("D2");
             currentAmmo = weaponSO.magSize;
-            currentAmmoUI.text = currentAmmo.magSize.ToString("D2");
+            currentAmmoUI.text = weaponSO.magSize.ToString("D2");
             Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
             currentweapon = newWeapon;
             this.weaponSO = weaponSO;
