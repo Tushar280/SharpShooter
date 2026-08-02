@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
   damage: 6
   firerate: 0.2
+  magSize: 45
   weaponPrefab: {fileID: 7446012117988197410, guid: 7b1964fadc56e264ba31df1f551042fe, type: 3}
   canZoom: 0
   zoomFov: 0
