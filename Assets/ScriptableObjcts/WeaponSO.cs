@@ -5,7 +5,7 @@ public class WeaponSO : ScriptableObject
 {
     public int damage;
     public float firerate;
-    public float magSize;
+    public int magSize;
     public GameObject weaponPrefab;
     public bool canZoom;
     public float zoomFov;

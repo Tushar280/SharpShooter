@@ -11,8 +11,8 @@ public class activeWeapon : MonoBehaviour
     [SerializeField] GameObject zoomImg;
     [SerializeField] float zoomSense;
 
-    [SerializeField] TMP_Text currentAmmo;
-    [SerializeField] TMP_Text totalAmmo;
+    [SerializeField] TMP_Text currentAmmoUI;
+    [SerializeField] TMP_Text totalAmmoUI;
     
     Weapon currentweapon;
     CinemachineCamera virtualCamera;
@@ -21,6 +21,7 @@ public class activeWeapon : MonoBehaviour
     float initTime;
     float defaultFov = 60f;
     float defaultZoomSense;
+    int currentAmmo;
 
     private void Start()
     {   
@@ -98,11 +99,13 @@ public class activeWeapon : MonoBehaviour
     {
         if (weaponSO == null || currentweapon == null) return;
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && currentAmmo > 0)
         {
             if (initTime >= weaponSO.firerate)
             {
                 currentweapon.Shoot(weaponSO);
+                currentAmmo -= 1;
+                currentAmmoUI.text = currentAmmo.ToString("D2");
                 initTime = 0;
             }
         }
@@ -116,9 +119,12 @@ public class activeWeapon : MonoBehaviour
         {
             Destroy(currentweapon.gameObject);
         }
+        
         if (weaponSO != null && weaponSO.weaponPrefab != null)
         {
-            totalAmmo.text = weaponSO.magSize.ToString("D2");
+            totalAmmoUI.text = weaponSO.magSize.ToString("D2");
+            currentAmmo = weaponSO.magSize;
+            currentAmmoUI.text = currentAmmo.magSize.ToString("D2");
             Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
             currentweapon = newWeapon;
             this.weaponSO = weaponSO;
