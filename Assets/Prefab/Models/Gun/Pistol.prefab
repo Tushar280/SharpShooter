@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306152269763550146}
   - component: {fileID: 3093461811977908547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3924903553239172761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol_02_Blue_Team
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d91fae2703d43046a1c37804ae23dad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -156,6 +160,10 @@ PrefabInstance:
     - target: {fileID: 3499881875250344575, guid: acc2f9da7ff3b3841bee64bcd2f2a3eb, type: 3}
       propertyPath: m_Name
       value: Muzzel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499881875250344575, guid: acc2f9da7ff3b3841bee64bcd2f2a3eb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6897167638405025765, guid: acc2f9da7ff3b3841bee64bcd2f2a3eb, type: 3}
       propertyPath: m_LocalPosition.x
