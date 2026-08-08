@@ -6485,6 +6485,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 816280239}
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
+      propertyPath: weaponSO
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: zoomSense
       value: 0.4
       objectReference: {fileID: 0}
@@ -6499,7 +6503,7 @@ PrefabInstance:
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: startingWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 00b4f646c477aa5488db25d48b11c180, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2352601173611916330, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.31
