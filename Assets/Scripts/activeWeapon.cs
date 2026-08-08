@@ -26,7 +26,10 @@ public class activeWeapon : MonoBehaviour
     private void Start()
     {   
         currentweapon = GetComponentInChildren<Weapon>();
-        SwitchWeapon(startingWeapon);
+        if (startingWeapon != null)
+        {
+            SwitchWeapon(startingWeapon);
+        }
         virtualCamera = FindAnyObjectByType<CinemachineCamera>();
         fpc = FindAnyObjectByType<FirstPersonController>();
         defaultZoomSense = 1f;
@@ -119,6 +122,8 @@ public class activeWeapon : MonoBehaviour
 
     public void SwitchWeapon(WeaponSO weaponSO)
     {
+        if (weaponSO == null) return;
+
         Debug.Log("Switched to weapon: " + weaponSO.name);
 
         if (currentweapon != null)
