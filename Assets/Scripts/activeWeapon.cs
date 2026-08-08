@@ -12,7 +12,6 @@ public class activeWeapon : MonoBehaviour
     [SerializeField] float zoomSense;
 
     [SerializeField] TMP_Text currentAmmoUI;
-    [SerializeField] TMP_Text totalAmmoUI;
     
     Weapon currentweapon;
     CinemachineCamera virtualCamera;
@@ -133,7 +132,6 @@ public class activeWeapon : MonoBehaviour
         
         if (weaponSO != null && weaponSO.weaponPrefab != null)
         {
-            totalAmmoUI.text = weaponSO.magSize.ToString("D2");
             currentAmmo = weaponSO.magSize;
             currentAmmoUI.text = weaponSO.magSize.ToString("D2");
             Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
