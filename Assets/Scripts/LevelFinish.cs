@@ -13,8 +13,8 @@ public class LevelFinish : MonoBehaviour
 
             if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
             {
-                Debug.Log("Next level is " + nextSceneIndex);
-                //SceneManager.LoadScene(nextSceneIndex);
+                //Debug.Log("Next level is " + nextSceneIndex);
+                SceneManager.LoadScene(nextSceneIndex);
             }
             else
             {

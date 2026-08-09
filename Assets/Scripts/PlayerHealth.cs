@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int health = 100;
     [SerializeField] TMP_Text healthText;
+    [SerializeField] GameObject DieUI;
 
 
     public void TakeDamage(int damage)
@@ -14,15 +15,10 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
-            SelfDestroy();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("Player died!");
+            DieUI.SetActive(true);
         }
         
-    }
-
-    public void SelfDestroy()
-    {
-        Destroy(gameObject);
     }
 
     public void Update()
