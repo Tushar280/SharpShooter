@@ -1599,7 +1599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &671969839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1814,9 +1814,9 @@ RectTransform:
   - {fileID: 991137576}
   m_Father: {fileID: 523974006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 960, y: -810}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692764905
@@ -2672,9 +2672,9 @@ RectTransform:
   - {fileID: 1209137806}
   m_Father: {fileID: 523974006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 960, y: -270}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947318765
@@ -8155,6 +8155,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4228421338179610973, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
+      propertyPath: DieUI
+      value: 
+      objectReference: {fileID: 671969838}
     - target: {fileID: 4228421338179610973, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: healthText
       value: 

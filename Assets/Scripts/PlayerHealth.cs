@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using StarterAssets;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,6 +18,15 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Player died!");
             DieUI.SetActive(true);
+            // 1. Disable player movement
+            FirstPersonController fpc = GetComponent<FirstPersonController>();
+            if (fpc != null) fpc.enabled = false;
+            // 2. Disable weapon shooting
+            activeWeapon weapon = GetComponent<activeWeapon>();
+            if (weapon != null) weapon.enabled = false;
+            // 3. Unlock and show cursor for UI buttons
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;  
         }
         
     }
