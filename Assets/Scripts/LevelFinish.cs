@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelFinish : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Level Finished!");
-            // script
+            // script to load next level
+            //int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            //SceneManager.LoadScene(nextSceneIndex);
         }
     }
 }
