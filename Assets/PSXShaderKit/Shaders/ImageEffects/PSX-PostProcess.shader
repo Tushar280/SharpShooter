@@ -1,8 +1,12 @@
-﻿Shader "Hidden/PSX-PostProcess"
+Shader "PSX/Image Effects/PSX-PostProcess"
 {
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
+		_ColorResolution("Color Resolution (RGB)", Vector) = (256, 256, 256, 0)
+		_DitherResolution("Dither Resolution (RGB)", Vector) = (32, 32, 32, 0)
+		_DitheringScale("Dithering Scale", Float) = 1.0
+		_HighResDitherMatrix("Dither Matrix Mode (0=2x2, 0.5=4x4, 1=PS1)", Float) = 1.0
 	}
 		SubShader
 	{

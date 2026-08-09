@@ -1,4 +1,4 @@
-﻿Shader "Hidden/PSX-Dithering"
+Shader "PSX/Image Effects/PSX-Dithering"
 {
 	Properties
 	{

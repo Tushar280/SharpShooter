@@ -1,4 +1,4 @@
-﻿Shader "Hidden/PSX-PostProcess-Accurate"
+Shader "PSX/Image Effects/PSX-PostProcess-Accurate"
 {
 	Properties
 	{

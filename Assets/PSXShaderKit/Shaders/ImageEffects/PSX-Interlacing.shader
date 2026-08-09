@@ -1,4 +1,4 @@
-﻿Shader "Hidden/PSX-Interlacing"
+Shader "PSX/Image Effects/PSX-Interlacing"
 {
 	Properties
 	{

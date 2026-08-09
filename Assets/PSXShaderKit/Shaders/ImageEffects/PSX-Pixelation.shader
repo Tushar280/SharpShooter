@@ -1,4 +1,4 @@
-﻿Shader "Hidden/PSX-Pixelation"
+Shader "PSX/Image Effects/PSX-Pixelation"
 {
 	Properties
 	{
