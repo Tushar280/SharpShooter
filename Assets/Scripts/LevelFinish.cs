@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class LevelFinish : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Level Finished!");
+            // script
+        }
     }
 }
