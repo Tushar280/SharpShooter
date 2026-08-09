@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Player died!");
             DieUI.SetActive(true);
+            
             // 1. Disable player movement
             FirstPersonController fpc = GetComponent<FirstPersonController>();
             if (fpc != null) fpc.enabled = false;
