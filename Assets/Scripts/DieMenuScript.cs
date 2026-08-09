@@ -6,6 +6,7 @@ public class DieMenuScript : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
@@ -17,6 +18,13 @@ public class DieMenuScript : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(1);
-    
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 }
