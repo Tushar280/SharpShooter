@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class DoorScrit : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private string enemyTag = "Enemy";
 
-    // Update is called once per frame
     void Update()
     {
+        int remainEny = GameObject.FindGameObjectsWithTag(enemyTag).Length;
         
+        if (remainEny == 0)
+        {
+            Debug.Log("All enemies killed. Opening door.");
+            Destroy(gameObject);
+        }
     }
 }
