@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class ActivateEnemy : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject enemyTrigger;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter(Collider other){
+        if(other.CompareTag("Player")){
+            enemyTrigger.SetActive(true);
+        }
     }
 }
