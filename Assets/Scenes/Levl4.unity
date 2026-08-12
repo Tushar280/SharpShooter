@@ -15772,7 +15772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0744927, g: 0.5849056, b: 0.3775728, a: 0.53333336}
+  m_Color: {r: 0.6981132, g: 0, b: 0, a: 0.45490196}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -34169,7 +34169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Won!!
+  m_text: You Died
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28be165903a8fde4da011f7e457e9444, type: 2}
   m_sharedMaterial: {fileID: 4967332671816086108, guid: 28be165903a8fde4da011f7e457e9444, type: 2}
