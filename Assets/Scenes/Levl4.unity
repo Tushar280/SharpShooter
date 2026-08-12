@@ -35120,6 +35120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextLvl
       objectReference: {fileID: 0}
+    - target: {fileID: 7970203870332233502, guid: ee960f1cebe15d245909699100ae5e58, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.19
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7878021344542262200, guid: ee960f1cebe15d245909699100ae5e58, type: 3}
     m_RemovedGameObjects: []
@@ -36655,7 +36659,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1661864058}
         m_TargetAssemblyTypeName: DieMenuScript, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
