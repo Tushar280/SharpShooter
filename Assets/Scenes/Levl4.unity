@@ -6536,7 +6536,7 @@ PrefabInstance:
     - target: {fileID: 7300921148061844234, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1944052587}
     - target: {fileID: 7716927641487633773, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: m_Name
       value: Robot (2)
@@ -8159,7 +8159,7 @@ PrefabInstance:
     - target: {fileID: 7300921148061844234, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1944052587}
     - target: {fileID: 7716927641487633773, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: m_Name
       value: Robot (5)
@@ -19092,7 +19092,7 @@ PrefabInstance:
     - target: {fileID: 7300921148061844234, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1944052587}
     - target: {fileID: 7716927641487633773, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: m_Name
       value: Robot
@@ -21280,7 +21280,7 @@ PrefabInstance:
     - target: {fileID: 7300921148061844234, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1944052587}
     - target: {fileID: 7716927641487633773, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: m_Name
       value: Robot (3)
@@ -30222,7 +30222,7 @@ PrefabInstance:
     - target: {fileID: 7300921148061844234, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1944052587}
     - target: {fileID: 7716927641487633773, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: m_Name
       value: Robot (4)
@@ -31613,6 +31613,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &1944052587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5928583991220424036, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
+  m_PrefabInstance: {fileID: 9119453366427902809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1951096040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31664,7 +31669,7 @@ PrefabInstance:
     - target: {fileID: 7300921148061844234, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1944052587}
     - target: {fileID: 7716927641487633773, guid: 6857503613bbf514b8610d635bb49b42, type: 3}
       propertyPath: m_Name
       value: Robot (1)
