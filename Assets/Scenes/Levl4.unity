@@ -30419,6 +30419,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6845419394724215118, guid: 0820458cd43c4ac4cbd13ed643b41302, type: 3}
+      propertyPath: m_Size.x
+      value: 37.77661
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845419394724215118, guid: 0820458cd43c4ac4cbd13ed643b41302, type: 3}
+      propertyPath: m_Size.y
+      value: 6.4959397
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845419394724215118, guid: 0820458cd43c4ac4cbd13ed643b41302, type: 3}
+      propertyPath: m_Center.x
+      value: -4.388305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845419394724215118, guid: 0820458cd43c4ac4cbd13ed643b41302, type: 3}
+      propertyPath: m_Center.y
+      value: 2.7479699
+      objectReference: {fileID: 0}
     - target: {fileID: 7400186486435874944, guid: 0820458cd43c4ac4cbd13ed643b41302, type: 3}
       propertyPath: m_Name
       value: Lava 1
