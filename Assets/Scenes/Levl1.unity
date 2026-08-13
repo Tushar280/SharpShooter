@@ -17025,7 +17025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524202002365406406, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: SprintSpeed
-      value: 12.6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3004117827397508475, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: m_LocalPosition.x
