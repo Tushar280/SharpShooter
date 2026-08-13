@@ -29908,11 +29908,11 @@ PrefabInstance:
     - target: {fileID: 793892230203688743, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 28be165903a8fde4da011f7e457e9444, type: 2}
+      objectReference: {fileID: 11400000, guid: 23bd4e9828faef04a9a50898122d2abb, type: 2}
     - target: {fileID: 793892230203688743, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 4967332671816086108, guid: 28be165903a8fde4da011f7e457e9444, type: 2}
+      objectReference: {fileID: -2216657052648452987, guid: 23bd4e9828faef04a9a50898122d2abb, type: 2}
     - target: {fileID: 793892230203688743, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -29920,6 +29920,14 @@ PrefabInstance:
     - target: {fileID: 1030569906944776881, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443000121802402152, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -176.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443000121802402152, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 53.9
       objectReference: {fileID: 0}
     - target: {fileID: 5008509585824776665, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
       propertyPath: m_AnchoredPosition.x
