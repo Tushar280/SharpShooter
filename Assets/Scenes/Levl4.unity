@@ -6966,7 +6966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7b6946fc938dc46aa192dddbbcb560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  gameWonScreen: {fileID: 0}
+  gameWonScreen: {fileID: 1661864056}
 --- !u!1 &692764903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11756,6 +11756,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &816280239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1369087602838092237, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
+  m_PrefabInstance: {fileID: 7942980779378730587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -22111,6 +22116,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535042402}
   m_CullTransparentMesh: 1
+--- !u!114 &1565465995 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 793892230203688743, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
+  m_PrefabInstance: {fileID: 7942980779378730587}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!4 &1565613822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2562585116393739183, guid: 8f45dd22f17db764195c8f79fde3ef58, type: 3}
@@ -23720,6 +23736,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870248567}
   m_CullTransparentMesh: 1
+--- !u!114 &1922633093 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 164188610455479464, guid: 2f69d6a3f98031d42aa9ea89c72c81f5, type: 3}
+  m_PrefabInstance: {fileID: 7942980779378730587}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1944052587 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5928583991220424036, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
@@ -30010,14 +30037,14 @@ PrefabInstance:
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: zoomImg
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 816280239}
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: weaponSO
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: zoomSense
-      value: 0.4
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: totalAmmoUI
@@ -30026,7 +30053,7 @@ PrefabInstance:
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: currentAmmoUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1922633093}
     - target: {fileID: 936972609413601077, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: startingWeapon
       value: 
@@ -30114,11 +30141,11 @@ PrefabInstance:
     - target: {fileID: 4228421338179610973, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: DieUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 671969838}
     - target: {fileID: 4228421338179610973, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: healthText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1565465995}
     - target: {fileID: 5928583991220424036, guid: fbc6593cc0230f44381bf4036c3437db, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule

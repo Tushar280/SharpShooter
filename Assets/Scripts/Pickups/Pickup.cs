@@ -5,10 +5,6 @@ public abstract class Pickup : MonoBehaviour
     const string PLAYER_TAG = "Player";
     [SerializeField] float rotationSpeed = 100f;
 
-    private void Update()
-    {
-        transform.Rotate(0f, rotationSpeed * Time.deltaTime, 0f, Space.Self);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
